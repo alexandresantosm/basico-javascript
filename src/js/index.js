@@ -1,8 +1,15 @@
 const root = document.querySelector('#root');
+const textTitle = 'Dificuldade';
 
-function newElement(tag, content) {
-  const title = `<${tag}>${content}</${tag}>`;
-  root.insertAdjacentHTML('beforeend', title);
-}
+/*
+Tagged Template String
+  É uma forma avançada de template string. São template string com marcações ou tags.
+  Possibilita modificar a saída dos template strings usando uma função.
+*/
+const title = Title`
+  color: red;
+  font-size: 20px;
+  ${textTitle}
+`;
 
-newElement('h1', 'Dificuldade');
+root.insertAdjacentHTML('beforeend', title);
